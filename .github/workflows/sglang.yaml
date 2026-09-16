@@ -28,6 +28,7 @@ jobs:
       PUSH_LATEST: true
       RELEASE_TAG: "v0.5.19"
       IMAGE_NAME: "sglang"
+      SUBDIRECTORY: "sglang"
       PUSH: ${{ needs.should-push.outputs.should_push }}
     secrets:
       PACKAGE_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
