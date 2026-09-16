@@ -25,9 +25,8 @@ jobs:
     if: github.server_url != 'https://github.com'
     uses: l3tum/reusable-workflows/.github/workflows/publish-forgejo.yml@main
     with:
-      PUSH_LATEST: true
-      RELEASE_TAG: "v0.5.19"
-      IMAGE_NAME: "sglang"
+      PUSH_LATEST: false
+      RELEASE_TAG: "sglang-v0.5.19"
       SUBDIRECTORY: "sglang"
       PUSH: ${{ needs.should-push.outputs.should_push }}
       BUILD_ARGS_JSON: |
