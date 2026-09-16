@@ -30,5 +30,9 @@ jobs:
       IMAGE_NAME: "sglang"
       SUBDIRECTORY: "sglang"
       PUSH: ${{ needs.should-push.outputs.should_push }}
+      BUILD_ARGS_JSON: |
+        {
+          "SGLANG_VERSION": "v0.5.19-runtime"
+        }
     secrets:
       PACKAGE_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
